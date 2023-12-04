@@ -1,3 +1,6 @@
-module phoenix_fpga ();
+module phoenix_fpga
+(
+  input	clk_25mhz
+);
 
 endmodule

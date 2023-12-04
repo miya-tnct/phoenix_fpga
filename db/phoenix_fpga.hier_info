@@ -1,0 +1,4 @@
+|phoenix_fpga
+clk_25mhz => ~NO_FANOUT~
+
+
