@@ -1,4 +1,9 @@
 |phoenix_fpga
 clk_25mhz => ~NO_FANOUT~
+leds[0] <= <GND>
+leds[1] <= <GND>
+leds[2] <= <GND>
+leds[3] <= <GND>
+leds[4] <= <GND>
 
 
