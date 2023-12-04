@@ -1,9 +1,19 @@
 |phoenix_fpga
-clk_25mhz => ~NO_FANOUT~
-leds[0] <= <GND>
-leds[1] <= <GND>
-leds[2] <= <GND>
-leds[3] <= <GND>
-leds[4] <= <GND>
+clk_25mhz => controller:controller.clk_clk
+leds[0] <= controller:controller.led0_pio
+leds[1] <= controller:controller.led1_pio
+leds[2] <= controller:controller.led2_pio
+leds[3] <= controller:controller.led3_pio
+leds[4] <= controller:controller.led4_pio
+
+
+|phoenix_fpga|controller:controller
+clk_clk => ~NO_FANOUT~
+reset_reset_n => ~NO_FANOUT~
+led0_pio <= <GND>
+led1_pio <= <GND>
+led2_pio <= <GND>
+led3_pio <= <GND>
+led4_pio <= <GND>
 
 

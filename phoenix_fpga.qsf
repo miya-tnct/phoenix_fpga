@@ -43,7 +43,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY phoenix_fpga
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:11:01  DECEMBER 04, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.2 Lite Edition"
-set_global_assignment -name SYSTEMVERILOG_FILE hdl/top.sv
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -62,9 +61,12 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "1.8 V" -to clk_25mhz
-set_global_assignment -name VERILOG_FILE top.v
 set_location_assignment PIN_C3 -to leds[1]
 set_location_assignment PIN_P11 -to leds[2]
 set_location_assignment PIN_P6 -to leds[3]
 set_location_assignment PIN_N6 -to leds[4]
+set_global_assignment -name VERILOG_FILE hdl/controller/controller_bb.v
+set_global_assignment -name SYSTEMVERILOG_FILE hdl/top.sv
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

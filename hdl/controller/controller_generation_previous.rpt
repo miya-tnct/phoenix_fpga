@@ -1,0 +1,34 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/kiks/phoenix_fpga/controller.qsys --block-symbol-file --output-directory=/home/kiks/phoenix_fpga/hdl/controller --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading phoenix_fpga/controller.qsys
+Progress: Reading input file
+Progress: Adding clk_25mhz [clock_source 22.1]
+Progress: Parameterizing module clk_25mhz
+Progress: Adding leds [phoenix_leds_source 1.0]
+Progress: Parameterizing module leds
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: controller.leds: leds.leds_in must be exported, or connected to a matching conduit.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/kiks/phoenix_fpga/controller.qsys --synthesis=VERILOG --output-directory=/home/kiks/phoenix_fpga/hdl/controller/synthesis --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading phoenix_fpga/controller.qsys
+Progress: Reading input file
+Progress: Adding clk_25mhz [clock_source 22.1]
+Progress: Parameterizing module clk_25mhz
+Progress: Adding leds [phoenix_leds_source 1.0]
+Progress: Parameterizing module leds
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: controller.leds: leds.leds_in must be exported, or connected to a matching conduit.
+Info: controller: Generating controller "controller" for QUARTUS_SYNTH
+Info: leds: "controller" instantiated phoenix_leds_source "leds"
+Info: controller: Done "controller" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
