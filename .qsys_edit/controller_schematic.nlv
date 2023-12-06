@@ -1,10 +1,18 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst controller.leds -pg 1 -lvl 1 -y 30
-preplace inst controller.clk_25mhz -pg 1 -lvl 1 -y 90
+preplace inst controller.led0 -pg 1 -lvl 1 -y 30
+preplace inst controller.led1 -pg 1 -lvl 1 -y 110
+preplace inst controller.led2 -pg 1 -lvl 1 -y 170
+preplace inst controller.led3 -pg 1 -lvl 1 -y 230
+preplace inst controller.clk_25mhz -pg 1 -lvl 1 -y 290
+preplace inst controller.led4 -pg 1 -lvl 1 -y 350
 preplace inst controller -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)clk_25mhz.clk_in_reset,(SLAVE)controller.reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)clk_25mhz.clk_in,(SLAVE)controller.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)leds.leds_out,(SLAVE)controller.leds) 1 0 1 NJ
-preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.reset,(SLAVE)clk_25mhz.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led2,(SLAVE)led2.pio_out) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led3,(SLAVE)led3.pio_out) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led4,(SLAVE)led4.pio_out) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led1,(SLAVE)led1.pio_out) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)led0.pio_out,(SLAVE)controller.led0) 1 0 1 NJ
 levelinfo -pg 1 0 50 270
 levelinfo -hier controller 60 90 260

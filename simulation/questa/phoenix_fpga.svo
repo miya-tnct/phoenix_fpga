@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-// DATE "12/06/2023 13:22:40"
+// DATE "12/06/2023 14:35:14"
 
 // 
 // Device: Altera 10CL025YU256C8G Package UFBGA256
@@ -32,8 +32,8 @@
 module phoenix_fpga (
 	clk_25mhz,
 	leds);
-input 	reg clk_25mhz ;
-output 	logic [4:0] leds ;
+input 	clk_25mhz;
+output 	[4:0] leds;
 
 // Design Ports Information
 // clk_25mhz	=>  Location: PIN_E15,	 I/O Standard: 1.8 V,	 Current Strength: Default

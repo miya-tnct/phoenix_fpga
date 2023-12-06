@@ -13,29 +13,138 @@ module controller (
 		input  wire  reset_reset_n  // reset.reset_n
 	);
 
+	wire    led_driver_0_pio_pio;           // led_driver_0:pio -> led0:pio_in
+	wire    led_driver_2_pio_pio;           // led_driver_2:pio -> led2:pio_in
+	wire    led_driver_3_pio_pio;           // led_driver_3:pio -> led3:pio_in
+	wire    led_driver1_pio_pio;            // led_driver1:pio -> led1:pio_in
+	wire    rst_controller_reset_out_reset; // rst_controller:reset_out -> [led_driver1:reset, led_driver_0:reset, led_driver_2:reset, led_driver_3:reset]
+
 	pio_source led0 (
-		.pio_in  (),         //  pio_in.pio
-		.pio_out (led0_pio)  // pio_out.pio
+		.pio_in  (led_driver_0_pio_pio), //  pio_in.pio
+		.pio_out (led0_pio)              // pio_out.pio
 	);
 
 	pio_source led1 (
-		.pio_in  (),         //  pio_in.pio
-		.pio_out (led1_pio)  // pio_out.pio
+		.pio_in  (led_driver1_pio_pio), //  pio_in.pio
+		.pio_out (led1_pio)             // pio_out.pio
 	);
 
 	pio_source led2 (
-		.pio_in  (),         //  pio_in.pio
-		.pio_out (led2_pio)  // pio_out.pio
+		.pio_in  (led_driver_2_pio_pio), //  pio_in.pio
+		.pio_out (led2_pio)              // pio_out.pio
 	);
 
 	pio_source led3 (
-		.pio_in  (),         //  pio_in.pio
-		.pio_out (led3_pio)  // pio_out.pio
+		.pio_in  (led_driver_3_pio_pio), //  pio_in.pio
+		.pio_out (led3_pio)              // pio_out.pio
 	);
 
 	pio_source led4 (
 		.pio_in  (),         //  pio_in.pio
 		.pio_out (led4_pio)  // pio_out.pio
+	);
+
+	PwmDriver #(
+		.COUNTER_BITS (16)
+	) led_driver1 (
+		.clk   (clk_clk),                        // clock.clk
+		.reset (rst_controller_reset_out_reset), // reset.reset
+		.pio   (led_driver1_pio_pio),            //   pio.pio
+		.cycle (),                               //   pwm.pwm_cycle
+		.duty  ()                                //      .pwm_duty
+	);
+
+	PwmDriver #(
+		.COUNTER_BITS (16)
+	) led_driver_0 (
+		.clk   (clk_clk),                        // clock.clk
+		.reset (rst_controller_reset_out_reset), // reset.reset
+		.pio   (led_driver_0_pio_pio),           //   pio.pio
+		.cycle (),                               //   pwm.pwm_cycle
+		.duty  ()                                //      .pwm_duty
+	);
+
+	PwmDriver #(
+		.COUNTER_BITS (16)
+	) led_driver_2 (
+		.clk   (clk_clk),                        // clock.clk
+		.reset (rst_controller_reset_out_reset), // reset.reset
+		.pio   (led_driver_2_pio_pio),           //   pio.pio
+		.cycle (),                               //   pwm.pwm_cycle
+		.duty  ()                                //      .pwm_duty
+	);
+
+	PwmDriver #(
+		.COUNTER_BITS (16)
+	) led_driver_3 (
+		.clk   (clk_clk),                        // clock.clk
+		.reset (rst_controller_reset_out_reset), // reset.reset
+		.pio   (led_driver_3_pio_pio),           //   pio.pio
+		.cycle (),                               //   pwm.pwm_cycle
+		.duty  ()                                //      .pwm_duty
+	);
+
+	altera_reset_controller #(
+		.NUM_RESET_INPUTS          (1),
+		.OUTPUT_RESET_SYNC_EDGES   ("deassert"),
+		.SYNC_DEPTH                (2),
+		.RESET_REQUEST_PRESENT     (0),
+		.RESET_REQ_WAIT_TIME       (1),
+		.MIN_RST_ASSERTION_TIME    (3),
+		.RESET_REQ_EARLY_DSRT_TIME (1),
+		.USE_RESET_REQUEST_IN0     (0),
+		.USE_RESET_REQUEST_IN1     (0),
+		.USE_RESET_REQUEST_IN2     (0),
+		.USE_RESET_REQUEST_IN3     (0),
+		.USE_RESET_REQUEST_IN4     (0),
+		.USE_RESET_REQUEST_IN5     (0),
+		.USE_RESET_REQUEST_IN6     (0),
+		.USE_RESET_REQUEST_IN7     (0),
+		.USE_RESET_REQUEST_IN8     (0),
+		.USE_RESET_REQUEST_IN9     (0),
+		.USE_RESET_REQUEST_IN10    (0),
+		.USE_RESET_REQUEST_IN11    (0),
+		.USE_RESET_REQUEST_IN12    (0),
+		.USE_RESET_REQUEST_IN13    (0),
+		.USE_RESET_REQUEST_IN14    (0),
+		.USE_RESET_REQUEST_IN15    (0),
+		.ADAPT_RESET_REQUEST       (0)
+	) rst_controller (
+		.reset_in0      (~reset_reset_n),                 // reset_in0.reset
+		.clk            (clk_clk),                        //       clk.clk
+		.reset_out      (rst_controller_reset_out_reset), // reset_out.reset
+		.reset_req      (),                               // (terminated)
+		.reset_req_in0  (1'b0),                           // (terminated)
+		.reset_in1      (1'b0),                           // (terminated)
+		.reset_req_in1  (1'b0),                           // (terminated)
+		.reset_in2      (1'b0),                           // (terminated)
+		.reset_req_in2  (1'b0),                           // (terminated)
+		.reset_in3      (1'b0),                           // (terminated)
+		.reset_req_in3  (1'b0),                           // (terminated)
+		.reset_in4      (1'b0),                           // (terminated)
+		.reset_req_in4  (1'b0),                           // (terminated)
+		.reset_in5      (1'b0),                           // (terminated)
+		.reset_req_in5  (1'b0),                           // (terminated)
+		.reset_in6      (1'b0),                           // (terminated)
+		.reset_req_in6  (1'b0),                           // (terminated)
+		.reset_in7      (1'b0),                           // (terminated)
+		.reset_req_in7  (1'b0),                           // (terminated)
+		.reset_in8      (1'b0),                           // (terminated)
+		.reset_req_in8  (1'b0),                           // (terminated)
+		.reset_in9      (1'b0),                           // (terminated)
+		.reset_req_in9  (1'b0),                           // (terminated)
+		.reset_in10     (1'b0),                           // (terminated)
+		.reset_req_in10 (1'b0),                           // (terminated)
+		.reset_in11     (1'b0),                           // (terminated)
+		.reset_req_in11 (1'b0),                           // (terminated)
+		.reset_in12     (1'b0),                           // (terminated)
+		.reset_req_in12 (1'b0),                           // (terminated)
+		.reset_in13     (1'b0),                           // (terminated)
+		.reset_req_in13 (1'b0),                           // (terminated)
+		.reset_in14     (1'b0),                           // (terminated)
+		.reset_req_in14 (1'b0),                           // (terminated)
+		.reset_in15     (1'b0),                           // (terminated)
+		.reset_req_in15 (1'b0)                            // (terminated)
 	);
 
 endmodule

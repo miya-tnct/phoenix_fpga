@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2023.12.06.12:01:42"
+ date="2023.12.06.14:34:28"
  outputDirectory="/home/kiks/phoenix_fpga/hdl/controller/">
  <perimeter>
   <parameter
@@ -90,13 +90,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="controller:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL025YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1701831701,AUTO_UNIQUE_ID=(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)"
+   parameterizationKey="controller:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL025YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1701840867,AUTO_UNIQUE_ID=(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pwm_driver:1.0:COUNTER_BITS=16)(pwm_driver:1.0:COUNTER_BITS=16)(pwm_driver:1.0:COUNTER_BITS=16)(pwm_driver:1.0:COUNTER_BITS=16)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)"
    instancePathKey="controller"
    kind="controller"
    version="1.0"
    name="controller">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1701831701" />
+  <parameter name="AUTO_GENERATION_ID" value="1701840867" />
   <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -113,12 +113,31 @@
        path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/pio_source.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/pwm_driver.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
    <file path="/home/kiks/phoenix_fpga/controller.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file path="/home/kiks/phoenix_fpga/pwm_source_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pwm_driver_hw.tcl" />
+   <file
+       path="/home/kiks/intelFPGA_lite/22.1std/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </childSourceFiles>
   <messages>
    <message level="Debug" culprit="controller">queue size: 0 starting:controller "controller"</message>
@@ -127,20 +146,33 @@
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>6</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>10</b> modules, <b>12</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
    <message level="Debug">Transform: InterruptFanoutTransform</message>
    <message level="Debug">Transform: AvalonStreamingTransform</message>
    <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>11</b> modules, <b>14</b> connections]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
-   <message level="Debug" culprit="controller">queue size: 4 starting:pio_source "submodules/pio_source"</message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="controller">queue size: 9 starting:pio_source "submodules/pio_source"</message>
    <message level="Info" culprit="led0"><![CDATA["<b>controller</b>" instantiated <b>pio_source</b> "<b>led0</b>"]]></message>
+   <message level="Debug" culprit="controller">queue size: 4 starting:pwm_driver "submodules/PwmDriver"</message>
+   <message level="Info" culprit="led_driver1"><![CDATA["<b>controller</b>" instantiated <b>pwm_driver</b> "<b>led_driver1</b>"]]></message>
+   <message level="Debug" culprit="controller">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>controller</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
   </messages>
  </entity>
  <entity
@@ -163,8 +195,68 @@
   <childSourceFiles/>
   <instantiator instantiator="controller" as="led0,led1,led2,led3,led4" />
   <messages>
-   <message level="Debug" culprit="controller">queue size: 4 starting:pio_source "submodules/pio_source"</message>
+   <message level="Debug" culprit="controller">queue size: 9 starting:pio_source "submodules/pio_source"</message>
    <message level="Info" culprit="led0"><![CDATA["<b>controller</b>" instantiated <b>pio_source</b> "<b>led0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="pwm_driver:1.0:COUNTER_BITS=16"
+   instancePathKey="controller:.:led_driver1"
+   kind="pwm_driver"
+   version="1.0"
+   name="PwmDriver">
+  <parameter name="COUNTER_BITS" value="16" />
+  <generatedFiles>
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/pwm_driver.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="/home/kiks/phoenix_fpga/pwm_driver_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="controller"
+     as="led_driver1,led_driver_0,led_driver_2,led_driver_3" />
+  <messages>
+   <message level="Debug" culprit="controller">queue size: 4 starting:pwm_driver "submodules/PwmDriver"</message>
+   <message level="Info" culprit="led_driver1"><![CDATA["<b>controller</b>" instantiated <b>pwm_driver</b> "<b>led_driver1</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:22.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="controller:.:rst_controller"
+   kind="altera_reset_controller"
+   version="22.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/kiks/intelFPGA_lite/22.1std/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="controller" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="controller">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>controller</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
   </messages>
  </entity>
 </deploy>
