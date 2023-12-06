@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2023.12.06.14:34:28"
+ date="2023.12.06.16:58:26"
  outputDirectory="/home/kiks/phoenix_fpga/hdl/controller/">
  <perimeter>
   <parameter
@@ -90,13 +90,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="controller:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL025YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1701840867,AUTO_UNIQUE_ID=(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pwm_driver:1.0:COUNTER_BITS=16)(pwm_driver:1.0:COUNTER_BITS=16)(pwm_driver:1.0:COUNTER_BITS=16)(pwm_driver:1.0:COUNTER_BITS=16)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)"
+   parameterizationKey="controller:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL025YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1701849506,AUTO_UNIQUE_ID=(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)"
    instancePathKey="controller"
    kind="controller"
    version="1.0"
    name="controller">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1701840867" />
+  <parameter name="AUTO_GENERATION_ID" value="1701849506" />
   <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -118,6 +118,10 @@
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
    <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/phoenix_led_controller.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
        path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
@@ -136,6 +140,7 @@
   <childSourceFiles>
    <file path="/home/kiks/phoenix_fpga/pwm_source_hw.tcl" />
    <file path="/home/kiks/phoenix_fpga/pwm_driver_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/phoenix_pwm_controller_hw.tcl" />
    <file
        path="/home/kiks/intelFPGA_lite/22.1std/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </childSourceFiles>
@@ -146,7 +151,7 @@
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>10</b> modules, <b>12</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>16</b> modules, <b>30</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
@@ -156,7 +161,7 @@
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
-   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>11</b> modules, <b>14</b> connections]]></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>17</b> modules, <b>32</b> connections]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pio_source</b> "<b>submodules/pio_source</b>"]]></message>
@@ -166,11 +171,19 @@
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>pwm_driver</b> "<b>submodules/PwmDriver</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>phoenix_led_controller</b> "<b>submodules/PhoenixLedController</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>phoenix_led_controller</b> "<b>submodules/PhoenixLedController</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>phoenix_led_controller</b> "<b>submodules/PhoenixLedController</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>phoenix_led_controller</b> "<b>submodules/PhoenixLedController</b>"]]></message>
+   <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>phoenix_led_controller</b> "<b>submodules/PhoenixLedController</b>"]]></message>
    <message level="Debug" culprit="controller"><![CDATA["<b>controller</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
-   <message level="Debug" culprit="controller">queue size: 9 starting:pio_source "submodules/pio_source"</message>
+   <message level="Debug" culprit="controller">queue size: 15 starting:pio_source "submodules/pio_source"</message>
    <message level="Info" culprit="led0"><![CDATA["<b>controller</b>" instantiated <b>pio_source</b> "<b>led0</b>"]]></message>
-   <message level="Debug" culprit="controller">queue size: 4 starting:pwm_driver "submodules/PwmDriver"</message>
-   <message level="Info" culprit="led_driver1"><![CDATA["<b>controller</b>" instantiated <b>pwm_driver</b> "<b>led_driver1</b>"]]></message>
+   <message level="Debug" culprit="controller">queue size: 10 starting:pwm_driver "submodules/PwmDriver"</message>
+   <message level="Info" culprit="led_driver_0"><![CDATA["<b>controller</b>" instantiated <b>pwm_driver</b> "<b>led_driver_0</b>"]]></message>
+   <message level="Debug" culprit="controller">queue size: 5 starting:phoenix_led_controller "submodules/PhoenixLedController"</message>
+   <message level="Info" culprit="phoenix_led_controller_0"><![CDATA["<b>controller</b>" instantiated <b>phoenix_led_controller</b> "<b>phoenix_led_controller_0</b>"]]></message>
    <message level="Debug" culprit="controller">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
    <message level="Info" culprit="rst_controller"><![CDATA["<b>controller</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
   </messages>
@@ -195,18 +208,18 @@
   <childSourceFiles/>
   <instantiator instantiator="controller" as="led0,led1,led2,led3,led4" />
   <messages>
-   <message level="Debug" culprit="controller">queue size: 9 starting:pio_source "submodules/pio_source"</message>
+   <message level="Debug" culprit="controller">queue size: 15 starting:pio_source "submodules/pio_source"</message>
    <message level="Info" culprit="led0"><![CDATA["<b>controller</b>" instantiated <b>pio_source</b> "<b>led0</b>"]]></message>
   </messages>
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="pwm_driver:1.0:COUNTER_BITS=16"
-   instancePathKey="controller:.:led_driver1"
+   parameterizationKey="pwm_driver:1.0:COUNTER_BITS=32"
+   instancePathKey="controller:.:led_driver_0"
    kind="pwm_driver"
    version="1.0"
    name="PwmDriver">
-  <parameter name="COUNTER_BITS" value="16" />
+  <parameter name="COUNTER_BITS" value="32" />
   <generatedFiles>
    <file
        path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/pwm_driver.sv"
@@ -220,10 +233,38 @@
   <childSourceFiles/>
   <instantiator
      instantiator="controller"
-     as="led_driver1,led_driver_0,led_driver_2,led_driver_3" />
+     as="led_driver_0,led_driver_1,led_driver_2,led_driver_3,led_driver_4" />
   <messages>
-   <message level="Debug" culprit="controller">queue size: 4 starting:pwm_driver "submodules/PwmDriver"</message>
-   <message level="Info" culprit="led_driver1"><![CDATA["<b>controller</b>" instantiated <b>pwm_driver</b> "<b>led_driver1</b>"]]></message>
+   <message level="Debug" culprit="controller">queue size: 10 starting:pwm_driver "submodules/PwmDriver"</message>
+   <message level="Info" culprit="led_driver_0"><![CDATA["<b>controller</b>" instantiated <b>pwm_driver</b> "<b>led_driver_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32"
+   instancePathKey="controller:.:phoenix_led_controller_0"
+   kind="phoenix_led_controller"
+   version="1.0"
+   name="PhoenixLedController">
+  <parameter name="PWM_COUNTER_BITS" value="32" />
+  <parameter name="CLOCK_FREQUENCY" value="25000000" />
+  <generatedFiles>
+   <file
+       path="/home/kiks/phoenix_fpga/hdl/controller/synthesis/submodules/phoenix_led_controller.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="/home/kiks/phoenix_fpga/phoenix_pwm_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="controller"
+     as="phoenix_led_controller_0,phoenix_led_controller_1,phoenix_led_controller_2,phoenix_led_controller_3,phoenix_led_controller_4" />
+  <messages>
+   <message level="Debug" culprit="controller">queue size: 5 starting:phoenix_led_controller "submodules/PhoenixLedController"</message>
+   <message level="Info" culprit="phoenix_led_controller_0"><![CDATA["<b>controller</b>" instantiated <b>phoenix_led_controller</b> "<b>phoenix_led_controller_0</b>"]]></message>
   </messages>
  </entity>
  <entity

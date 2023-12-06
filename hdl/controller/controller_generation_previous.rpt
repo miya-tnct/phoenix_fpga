@@ -1,109 +1,75 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/kiks/phoenix_fpga/pd/controller.qsys --block-symbol-file --output-directory=/home/kiks/phoenix_fpga/hdl/controller --family="Cyclone 10 LP" --part=10CL025YU256C8G
-Progress: Loading pd/controller.qsys
+Info: qsys-generate /home/kiks/phoenix_fpga/controller.qsys --block-symbol-file --output-directory=/home/kiks/phoenix_fpga/hdl/controller --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading phoenix_fpga/controller.qsys
 Progress: Reading input file
 Progress: Adding clk_25mhz [clock_source 22.1]
 Progress: Parameterizing module clk_25mhz
 Progress: Adding led0 [pio_source 1.0]
-Warning: led0: Component type pio_source is not in the library
 Progress: Parameterizing module led0
 Progress: Adding led1 [pio_source 1.0]
-Warning: led1: Component type pio_source is not in the library
 Progress: Parameterizing module led1
 Progress: Adding led2 [pio_source 1.0]
-Warning: led2: Component type pio_source is not in the library
 Progress: Parameterizing module led2
 Progress: Adding led3 [pio_source 1.0]
-Warning: led3: Component type pio_source is not in the library
 Progress: Parameterizing module led3
 Progress: Adding led4 [pio_source 1.0]
-Warning: led4: Component type pio_source is not in the library
 Progress: Parameterizing module led4
-Progress: Adding led_driver1 [pwm_driver 1.0]
-Warning: led_driver1: Component type pwm_driver is not in the library
-Progress: Parameterizing module led_driver1
 Progress: Adding led_driver_0 [pwm_driver 1.0]
-Warning: led_driver_0: Component type pwm_driver is not in the library
 Progress: Parameterizing module led_driver_0
+Progress: Adding led_driver_1 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_1
 Progress: Adding led_driver_2 [pwm_driver 1.0]
-Warning: led_driver_2: Component type pwm_driver is not in the library
 Progress: Parameterizing module led_driver_2
 Progress: Adding led_driver_3 [pwm_driver 1.0]
-Warning: led_driver_3: Component type pwm_driver is not in the library
 Progress: Parameterizing module led_driver_3
+Progress: Adding led_driver_4 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_4
+Progress: Adding phoenix_led_controller_0 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Error: controller.led0: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led1: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led2: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led3: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led4: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led_driver1: Component pwm_driver 1.0 not found or could not be instantiated
-Error: controller.led_driver_0: Component pwm_driver 1.0 not found or could not be instantiated
-Error: controller.led_driver_2: Component pwm_driver 1.0 not found or could not be instantiated
-Error: controller.led_driver_3: Component pwm_driver 1.0 not found or could not be instantiated
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/kiks/phoenix_fpga/pd/controller.qsys --synthesis=VERILOG --output-directory=/home/kiks/phoenix_fpga/hdl/controller/synthesis --family="Cyclone 10 LP" --part=10CL025YU256C8G
-Progress: Loading pd/controller.qsys
+Info: qsys-generate /home/kiks/phoenix_fpga/controller.qsys --synthesis=VERILOG --output-directory=/home/kiks/phoenix_fpga/hdl/controller/synthesis --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading phoenix_fpga/controller.qsys
 Progress: Reading input file
 Progress: Adding clk_25mhz [clock_source 22.1]
 Progress: Parameterizing module clk_25mhz
 Progress: Adding led0 [pio_source 1.0]
-Warning: led0: Component type pio_source is not in the library
 Progress: Parameterizing module led0
 Progress: Adding led1 [pio_source 1.0]
-Warning: led1: Component type pio_source is not in the library
 Progress: Parameterizing module led1
 Progress: Adding led2 [pio_source 1.0]
-Warning: led2: Component type pio_source is not in the library
 Progress: Parameterizing module led2
 Progress: Adding led3 [pio_source 1.0]
-Warning: led3: Component type pio_source is not in the library
 Progress: Parameterizing module led3
 Progress: Adding led4 [pio_source 1.0]
-Warning: led4: Component type pio_source is not in the library
 Progress: Parameterizing module led4
-Progress: Adding led_driver1 [pwm_driver 1.0]
-Warning: led_driver1: Component type pwm_driver is not in the library
-Progress: Parameterizing module led_driver1
 Progress: Adding led_driver_0 [pwm_driver 1.0]
-Warning: led_driver_0: Component type pwm_driver is not in the library
 Progress: Parameterizing module led_driver_0
+Progress: Adding led_driver_1 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_1
 Progress: Adding led_driver_2 [pwm_driver 1.0]
-Warning: led_driver_2: Component type pwm_driver is not in the library
 Progress: Parameterizing module led_driver_2
 Progress: Adding led_driver_3 [pwm_driver 1.0]
-Warning: led_driver_3: Component type pwm_driver is not in the library
 Progress: Parameterizing module led_driver_3
+Progress: Adding led_driver_4 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_4
+Progress: Adding phoenix_led_controller_0 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Error: controller.led0: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led1: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led2: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led3: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led4: Component pio_source 1.0 not found or could not be instantiated
-Error: controller.led_driver1: Component pwm_driver 1.0 not found or could not be instantiated
-Error: controller.led_driver_0: Component pwm_driver 1.0 not found or could not be instantiated
-Error: controller.led_driver_2: Component pwm_driver 1.0 not found or could not be instantiated
-Error: controller.led_driver_3: Component pwm_driver 1.0 not found or could not be instantiated
 Info: controller: Generating controller "controller" for QUARTUS_SYNTH
-Warning: controller: "No matching role found for clk_25mhz:clk:clk_out (clk)"
-Warning: controller: "No matching role found for clk_25mhz:clk:clk_out (clk)"
-Warning: controller: "No matching role found for clk_25mhz:clk:clk_out (clk)"
-Warning: controller: "No matching role found for clk_25mhz:clk:clk_out (clk)"
-Warning: controller: "No matching role found for clk_25mhz:clk_reset:reset_n_out (reset)"
-Warning: controller: "No matching role found for clk_25mhz:clk_reset:reset_n_out (reset)"
-Warning: controller: "No matching role found for clk_25mhz:clk_reset:reset_n_out (reset)"
-Warning: controller: "No matching role found for clk_25mhz:clk_reset:reset_n_out (reset)"
-Error: led0: missing_module does not support generation.
-Error: Generation stopped, 8 or more modules remaining
-Info: controller: Done "controller" with 3 modules, 1 files
-Error: qsys-generate failed with exit code 1: 11 Errors, 17 Warnings
+Info: led0: "controller" instantiated pio_source "led0"
+Info: led_driver_0: "controller" instantiated pwm_driver "led_driver_0"
+Info: phoenix_led_controller_0: "controller" instantiated phoenix_led_controller "phoenix_led_controller_0"
+Info: rst_controller: "controller" instantiated altera_reset_controller "rst_controller"
+Info: controller: Done "controller" with 5 modules, 7 files
+Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

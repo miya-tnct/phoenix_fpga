@@ -14,23 +14,30 @@ Progress: Adding led3 [pio_source 1.0]
 Progress: Parameterizing module led3
 Progress: Adding led4 [pio_source 1.0]
 Progress: Parameterizing module led4
-Progress: Adding led_driver1 [pwm_driver 1.0]
-Progress: Parameterizing module led_driver1
 Progress: Adding led_driver_0 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_0
+Progress: Adding led_driver_1 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_1
 Progress: Adding led_driver_2 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_2
 Progress: Adding led_driver_3 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_3
+Progress: Adding led_driver_4 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_4
+Progress: Adding phoenix_led_controller_0 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_0
+Progress: Adding phoenix_led_controller_1 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_1
+Progress: Adding phoenix_led_controller_2 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_2
+Progress: Adding phoenix_led_controller_3 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_3
+Progress: Adding phoenix_led_controller_4 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_4
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: controller.led4: led4.pio_in must be exported, or connected to a matching conduit.
-Warning: controller.led_driver1: led_driver1.pwm must be exported, or connected to a matching conduit.
-Warning: controller.led_driver_0: led_driver_0.pwm must be exported, or connected to a matching conduit.
-Warning: controller.led_driver_2: led_driver_2.pwm must be exported, or connected to a matching conduit.
-Warning: controller.led_driver_3: led_driver_3.pwm must be exported, or connected to a matching conduit.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -50,27 +57,35 @@ Progress: Adding led3 [pio_source 1.0]
 Progress: Parameterizing module led3
 Progress: Adding led4 [pio_source 1.0]
 Progress: Parameterizing module led4
-Progress: Adding led_driver1 [pwm_driver 1.0]
-Progress: Parameterizing module led_driver1
 Progress: Adding led_driver_0 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_0
+Progress: Adding led_driver_1 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_1
 Progress: Adding led_driver_2 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_2
 Progress: Adding led_driver_3 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_3
+Progress: Adding led_driver_4 [pwm_driver 1.0]
+Progress: Parameterizing module led_driver_4
+Progress: Adding phoenix_led_controller_0 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_0
+Progress: Adding phoenix_led_controller_1 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_1
+Progress: Adding phoenix_led_controller_2 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_2
+Progress: Adding phoenix_led_controller_3 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_3
+Progress: Adding phoenix_led_controller_4 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_4
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: controller.led4: led4.pio_in must be exported, or connected to a matching conduit.
-Warning: controller.led_driver1: led_driver1.pwm must be exported, or connected to a matching conduit.
-Warning: controller.led_driver_0: led_driver_0.pwm must be exported, or connected to a matching conduit.
-Warning: controller.led_driver_2: led_driver_2.pwm must be exported, or connected to a matching conduit.
-Warning: controller.led_driver_3: led_driver_3.pwm must be exported, or connected to a matching conduit.
 Info: controller: Generating controller "controller" for QUARTUS_SYNTH
 Info: led0: "controller" instantiated pio_source "led0"
-Info: led_driver1: "controller" instantiated pwm_driver "led_driver1"
+Info: led_driver_0: "controller" instantiated pwm_driver "led_driver_0"
+Info: phoenix_led_controller_0: "controller" instantiated phoenix_led_controller "phoenix_led_controller_0"
 Info: rst_controller: "controller" instantiated altera_reset_controller "rst_controller"
-Info: controller: Done "controller" with 4 modules, 6 files
+Info: controller: Done "controller" with 5 modules, 7 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

@@ -1,18 +1,28 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst controller.led0 -pg 1 -lvl 1 -y 30
-preplace inst controller.led1 -pg 1 -lvl 1 -y 110
-preplace inst controller.led2 -pg 1 -lvl 1 -y 170
-preplace inst controller.led3 -pg 1 -lvl 1 -y 230
-preplace inst controller.clk_25mhz -pg 1 -lvl 1 -y 290
-preplace inst controller.led4 -pg 1 -lvl 1 -y 350
+preplace inst controller.led0 -pg 1 -lvl 1 -y 40
+preplace inst controller.led1 -pg 1 -lvl 1 -y 120
+preplace inst controller.led2 -pg 1 -lvl 1 -y 200
+preplace inst controller.led_driver_0 -pg 1 -lvl 2 -y 40
+preplace inst controller.led3 -pg 1 -lvl 1 -y 280
+preplace inst controller.clk_25mhz -pg 1 -lvl 1 -y 340
+preplace inst controller.led_driver1 -pg 1 -lvl 2 -y 140
+preplace inst controller.led4 -pg 1 -lvl 1 -y 400
+preplace inst controller.led_driver_2 -pg 1 -lvl 2 -y 240
 preplace inst controller -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst controller.led_driver_3 -pg 1 -lvl 2 -y 340
 preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)clk_25mhz.clk_in_reset,(SLAVE)controller.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led0,(SLAVE)led0.pio_out) 1 0 1 NJ
 preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)clk_25mhz.clk_in,(SLAVE)controller.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led1.pio_in,(SLAVE)led_driver1.pio) 1 0 2 80 110 280
 preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led2,(SLAVE)led2.pio_out) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)led4.pio_out,(SLAVE)controller.led4) 1 0 1 NJ
 preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led3,(SLAVE)led3.pio_out) 1 0 1 NJ
-preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led4,(SLAVE)led4.pio_out) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_2.pio,(SLAVE)led2.pio_in) 1 0 2 80 190 340
+preplace netloc FAN_OUT<net_container>controller</net_container>(SLAVE)led_driver_3.clock,(SLAVE)led_driver1.clock,(MASTER)clk_25mhz.clk,(SLAVE)led_driver_2.clock,(SLAVE)led_driver_0.clock) 1 1 1 360
+preplace netloc FAN_OUT<net_container>controller</net_container>(SLAVE)led_driver1.reset,(SLAVE)led_driver_3.reset,(SLAVE)led_driver_2.reset,(SLAVE)led_driver_0.reset,(MASTER)clk_25mhz.clk_reset) 1 1 1 300
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_0.pio,(SLAVE)led0.pio_in) 1 0 2 80 30 380
 preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led1,(SLAVE)led1.pio_out) 1 0 1 NJ
-preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)led0.pio_out,(SLAVE)controller.led0) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier controller 60 90 260
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led3.pio_in,(SLAVE)led_driver_3.pio) 1 0 2 80 270 320
+levelinfo -pg 1 0 50 530
+levelinfo -hier controller 60 110 420 520
