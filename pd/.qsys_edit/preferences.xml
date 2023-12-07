@@ -10,5 +10,5 @@
  </systemtable>
  <library expandedCategories="Project,Library" />
  <window width="1850" height="1053" x="70" y="27" />
- <generation path="hdl/controller" />
+ <generation path="/home/kiks/phoenix_fpga/hdl/_PROJECT_NAME_" />
 </preferences>

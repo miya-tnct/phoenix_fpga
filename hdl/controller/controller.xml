@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2023.12.06.16:58:26"
+ date="2023.12.07.11:31:48"
  outputDirectory="/home/kiks/phoenix_fpga/hdl/controller/">
  <perimeter>
   <parameter
@@ -90,13 +90,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="controller:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL025YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1701849506,AUTO_UNIQUE_ID=(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)"
+   parameterizationKey="controller:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL025YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1701916307,AUTO_UNIQUE_ID=(clock_source:22.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pio_source:1.0:)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(pwm_driver:1.0:COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(phoenix_led_controller:1.0:CLOCK_FREQUENCY=25000000,PWM_COUNTER_BITS=32)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)(reset:22.1:)"
    instancePathKey="controller"
    kind="controller"
    version="1.0"
    name="controller">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1701849506" />
+  <parameter name="AUTO_GENERATION_ID" value="1701916307" />
   <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -135,12 +135,12 @@
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="/home/kiks/phoenix_fpga/controller.qsys" />
+   <file path="/home/kiks/phoenix_fpga/pd/controller.qsys" />
   </sourceFiles>
   <childSourceFiles>
-   <file path="/home/kiks/phoenix_fpga/pwm_source_hw.tcl" />
-   <file path="/home/kiks/phoenix_fpga/pwm_driver_hw.tcl" />
-   <file path="/home/kiks/phoenix_fpga/phoenix_pwm_controller_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pd/pio_source_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pd/pwm_driver_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pd/led__hw.tcl" />
    <file
        path="/home/kiks/intelFPGA_lite/22.1std/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </childSourceFiles>
@@ -203,7 +203,7 @@
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
-   <file path="/home/kiks/phoenix_fpga/pwm_source_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pd/pio_source_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="controller" as="led0,led1,led2,led3,led4" />
@@ -228,7 +228,7 @@
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
-   <file path="/home/kiks/phoenix_fpga/pwm_driver_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pd/pwm_driver_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator
@@ -256,7 +256,7 @@
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
-   <file path="/home/kiks/phoenix_fpga/phoenix_pwm_controller_hw.tcl" />
+   <file path="/home/kiks/phoenix_fpga/pd/led__hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator

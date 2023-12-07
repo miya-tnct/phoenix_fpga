@@ -4,6 +4,6 @@ module pio_source
   output wire pio_out
 );
 
-assign pio_out = pio_in;
+assign pio_out = 1;//pio_in;
 
 endmodule

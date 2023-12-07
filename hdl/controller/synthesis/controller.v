@@ -13,146 +13,146 @@ module controller (
 		input  wire  reset_reset_n  // reset.reset_n
 	);
 
-	wire         led_driver_0_pio_pio;                   // led_driver_0:pio -> led0:pio_in
-	wire         led_driver_1_pio_pio;                   // led_driver_1:pio -> led1:pio_in
-	wire         led_driver_2_pio_pio;                   // led_driver_2:pio -> led2:pio_in
-	wire         led_driver_3_pio_pio;                   // led_driver_3:pio -> led3:pio_in
-	wire         led_driver_4_pio_pio;                   // led_driver_4:pio -> led4:pio_in
-	wire  [31:0] phoenix_led_controller_0_pwm_pwm_cycle; // phoenix_led_controller_0:pwm_cycle -> led_driver_0:cycle
-	wire  [31:0] phoenix_led_controller_0_pwm_pwm_duty;  // phoenix_led_controller_0:pwm_duty -> led_driver_0:duty
-	wire  [31:0] phoenix_led_controller_1_pwm_pwm_cycle; // phoenix_led_controller_1:pwm_cycle -> led_driver_1:cycle
-	wire  [31:0] phoenix_led_controller_1_pwm_pwm_duty;  // phoenix_led_controller_1:pwm_duty -> led_driver_1:duty
-	wire  [31:0] phoenix_led_controller_2_pwm_pwm_cycle; // phoenix_led_controller_2:pwm_cycle -> led_driver_2:cycle
-	wire  [31:0] phoenix_led_controller_2_pwm_pwm_duty;  // phoenix_led_controller_2:pwm_duty -> led_driver_2:duty
-	wire  [31:0] phoenix_led_controller_3_pwm_pwm_cycle; // phoenix_led_controller_3:pwm_cycle -> led_driver_3:cycle
-	wire  [31:0] phoenix_led_controller_3_pwm_pwm_duty;  // phoenix_led_controller_3:pwm_duty -> led_driver_3:duty
-	wire  [31:0] phoenix_led_controller_4_pwm_pwm_cycle; // phoenix_led_controller_4:pwm_cycle -> led_driver_4:cycle
-	wire  [31:0] phoenix_led_controller_4_pwm_pwm_duty;  // phoenix_led_controller_4:pwm_duty -> led_driver_4:duty
-	wire         rst_controller_reset_out_reset;         // rst_controller:reset_out -> [led_driver_0:reset, led_driver_1:reset, led_driver_2:reset, led_driver_3:reset, led_driver_4:reset, phoenix_led_controller_0:reset, phoenix_led_controller_1:reset, phoenix_led_controller_2:reset, phoenix_led_controller_3:reset, phoenix_led_controller_4:reset]
+	wire         led_driver_0_pwm_pio;                          // led_driver_0:pwm -> led0:pio_in
+	wire         led_driver_1_pwm_pio;                          // led_driver_1:pwm -> led1:pio_in
+	wire         led_driver_2_pwm_pio;                          // led_driver_2:pwm -> led2:pio_in
+	wire         led_driver_3_pwm_pio;                          // led_driver_3:pwm -> led3:pio_in
+	wire         led_driver_4_pwm_pio;                          // led_driver_4:pwm -> led4:pio_in
+	wire  [31:0] phoenix_led_controller_0_pwm_source_pwm_cycle; // phoenix_led_controller_0:pwm_cycle -> led_driver_0:cycle
+	wire  [31:0] phoenix_led_controller_0_pwm_source_pwm_duty;  // phoenix_led_controller_0:pwm_duty -> led_driver_0:duty
+	wire  [31:0] phoenix_led_controller_1_pwm_source_pwm_cycle; // phoenix_led_controller_1:pwm_cycle -> led_driver_1:cycle
+	wire  [31:0] phoenix_led_controller_1_pwm_source_pwm_duty;  // phoenix_led_controller_1:pwm_duty -> led_driver_1:duty
+	wire  [31:0] phoenix_led_controller_2_pwm_source_pwm_cycle; // phoenix_led_controller_2:pwm_cycle -> led_driver_2:cycle
+	wire  [31:0] phoenix_led_controller_2_pwm_source_pwm_duty;  // phoenix_led_controller_2:pwm_duty -> led_driver_2:duty
+	wire  [31:0] phoenix_led_controller_3_pwm_source_pwm_cycle; // phoenix_led_controller_3:pwm_cycle -> led_driver_3:cycle
+	wire  [31:0] phoenix_led_controller_3_pwm_source_pwm_duty;  // phoenix_led_controller_3:pwm_duty -> led_driver_3:duty
+	wire  [31:0] phoenix_led_controller_4_pwm_source_pwm_cycle; // phoenix_led_controller_4:pwm_cycle -> led_driver_4:cycle
+	wire  [31:0] phoenix_led_controller_4_pwm_source_pwm_duty;  // phoenix_led_controller_4:pwm_duty -> led_driver_4:duty
+	wire         rst_controller_reset_out_reset;                // rst_controller:reset_out -> [led_driver_0:reset, led_driver_1:reset, led_driver_2:reset, led_driver_3:reset, led_driver_4:reset, phoenix_led_controller_0:reset, phoenix_led_controller_1:reset, phoenix_led_controller_2:reset, phoenix_led_controller_3:reset, phoenix_led_controller_4:reset]
 
 	pio_source led0 (
-		.pio_in  (led_driver_0_pio_pio), //  pio_in.pio
+		.pio_in  (led_driver_0_pwm_pio), //  pio_in.pio
 		.pio_out (led0_pio)              // pio_out.pio
 	);
 
 	pio_source led1 (
-		.pio_in  (led_driver_1_pio_pio), //  pio_in.pio
+		.pio_in  (led_driver_1_pwm_pio), //  pio_in.pio
 		.pio_out (led1_pio)              // pio_out.pio
 	);
 
 	pio_source led2 (
-		.pio_in  (led_driver_2_pio_pio), //  pio_in.pio
+		.pio_in  (led_driver_2_pwm_pio), //  pio_in.pio
 		.pio_out (led2_pio)              // pio_out.pio
 	);
 
 	pio_source led3 (
-		.pio_in  (led_driver_3_pio_pio), //  pio_in.pio
+		.pio_in  (led_driver_3_pwm_pio), //  pio_in.pio
 		.pio_out (led3_pio)              // pio_out.pio
 	);
 
 	pio_source led4 (
-		.pio_in  (led_driver_4_pio_pio), //  pio_in.pio
+		.pio_in  (led_driver_4_pwm_pio), //  pio_in.pio
 		.pio_out (led4_pio)              // pio_out.pio
 	);
 
 	PwmDriver #(
 		.COUNTER_BITS (32)
 	) led_driver_0 (
-		.clk   (clk_clk),                                // clock.clk
-		.reset (rst_controller_reset_out_reset),         // reset.reset
-		.pio   (led_driver_0_pio_pio),                   //   pio.pio
-		.cycle (phoenix_led_controller_0_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.duty  (phoenix_led_controller_0_pwm_pwm_duty)   //      .pwm_duty
+		.cycle (phoenix_led_controller_0_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.duty  (phoenix_led_controller_0_pwm_source_pwm_duty),  //           .pwm_duty
+		.pwm   (led_driver_0_pwm_pio),                          //        pwm.pio
+		.clk   (clk_clk),                                       //      clock.clk
+		.reset (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PwmDriver #(
 		.COUNTER_BITS (32)
 	) led_driver_1 (
-		.clk   (clk_clk),                                // clock.clk
-		.reset (rst_controller_reset_out_reset),         // reset.reset
-		.pio   (led_driver_1_pio_pio),                   //   pio.pio
-		.cycle (phoenix_led_controller_1_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.duty  (phoenix_led_controller_1_pwm_pwm_duty)   //      .pwm_duty
+		.cycle (phoenix_led_controller_1_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.duty  (phoenix_led_controller_1_pwm_source_pwm_duty),  //           .pwm_duty
+		.pwm   (led_driver_1_pwm_pio),                          //        pwm.pio
+		.clk   (clk_clk),                                       //      clock.clk
+		.reset (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PwmDriver #(
 		.COUNTER_BITS (32)
 	) led_driver_2 (
-		.clk   (clk_clk),                                // clock.clk
-		.reset (rst_controller_reset_out_reset),         // reset.reset
-		.pio   (led_driver_2_pio_pio),                   //   pio.pio
-		.cycle (phoenix_led_controller_2_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.duty  (phoenix_led_controller_2_pwm_pwm_duty)   //      .pwm_duty
+		.cycle (phoenix_led_controller_2_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.duty  (phoenix_led_controller_2_pwm_source_pwm_duty),  //           .pwm_duty
+		.pwm   (led_driver_2_pwm_pio),                          //        pwm.pio
+		.clk   (clk_clk),                                       //      clock.clk
+		.reset (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PwmDriver #(
 		.COUNTER_BITS (32)
 	) led_driver_3 (
-		.clk   (clk_clk),                                // clock.clk
-		.reset (rst_controller_reset_out_reset),         // reset.reset
-		.pio   (led_driver_3_pio_pio),                   //   pio.pio
-		.cycle (phoenix_led_controller_3_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.duty  (phoenix_led_controller_3_pwm_pwm_duty)   //      .pwm_duty
+		.cycle (phoenix_led_controller_3_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.duty  (phoenix_led_controller_3_pwm_source_pwm_duty),  //           .pwm_duty
+		.pwm   (led_driver_3_pwm_pio),                          //        pwm.pio
+		.clk   (clk_clk),                                       //      clock.clk
+		.reset (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PwmDriver #(
 		.COUNTER_BITS (32)
 	) led_driver_4 (
-		.clk   (clk_clk),                                // clock.clk
-		.reset (rst_controller_reset_out_reset),         // reset.reset
-		.pio   (led_driver_4_pio_pio),                   //   pio.pio
-		.cycle (phoenix_led_controller_4_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.duty  (phoenix_led_controller_4_pwm_pwm_duty)   //      .pwm_duty
+		.cycle (phoenix_led_controller_4_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.duty  (phoenix_led_controller_4_pwm_source_pwm_duty),  //           .pwm_duty
+		.pwm   (led_driver_4_pwm_pio),                          //        pwm.pio
+		.clk   (clk_clk),                                       //      clock.clk
+		.reset (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PhoenixLedController #(
 		.CLOCK_FREQUENCY  (25000000),
 		.PWM_COUNTER_BITS (32)
 	) phoenix_led_controller_0 (
-		.clk       (clk_clk),                                // clock.clk
-		.reset     (rst_controller_reset_out_reset),         // reset.reset
-		.pwm_cycle (phoenix_led_controller_0_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.pwm_duty  (phoenix_led_controller_0_pwm_pwm_duty)   //      .pwm_duty
+		.pwm_cycle (phoenix_led_controller_0_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.pwm_duty  (phoenix_led_controller_0_pwm_source_pwm_duty),  //           .pwm_duty
+		.clk       (clk_clk),                                       //      clock.clk
+		.reset     (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PhoenixLedController #(
 		.CLOCK_FREQUENCY  (25000000),
 		.PWM_COUNTER_BITS (32)
 	) phoenix_led_controller_1 (
-		.clk       (clk_clk),                                // clock.clk
-		.reset     (rst_controller_reset_out_reset),         // reset.reset
-		.pwm_cycle (phoenix_led_controller_1_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.pwm_duty  (phoenix_led_controller_1_pwm_pwm_duty)   //      .pwm_duty
+		.pwm_cycle (phoenix_led_controller_1_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.pwm_duty  (phoenix_led_controller_1_pwm_source_pwm_duty),  //           .pwm_duty
+		.clk       (clk_clk),                                       //      clock.clk
+		.reset     (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PhoenixLedController #(
 		.CLOCK_FREQUENCY  (25000000),
 		.PWM_COUNTER_BITS (32)
 	) phoenix_led_controller_2 (
-		.clk       (clk_clk),                                // clock.clk
-		.reset     (rst_controller_reset_out_reset),         // reset.reset
-		.pwm_cycle (phoenix_led_controller_2_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.pwm_duty  (phoenix_led_controller_2_pwm_pwm_duty)   //      .pwm_duty
+		.pwm_cycle (phoenix_led_controller_2_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.pwm_duty  (phoenix_led_controller_2_pwm_source_pwm_duty),  //           .pwm_duty
+		.clk       (clk_clk),                                       //      clock.clk
+		.reset     (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PhoenixLedController #(
 		.CLOCK_FREQUENCY  (25000000),
 		.PWM_COUNTER_BITS (32)
 	) phoenix_led_controller_3 (
-		.clk       (clk_clk),                                // clock.clk
-		.reset     (rst_controller_reset_out_reset),         // reset.reset
-		.pwm_cycle (phoenix_led_controller_3_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.pwm_duty  (phoenix_led_controller_3_pwm_pwm_duty)   //      .pwm_duty
+		.pwm_cycle (phoenix_led_controller_3_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.pwm_duty  (phoenix_led_controller_3_pwm_source_pwm_duty),  //           .pwm_duty
+		.clk       (clk_clk),                                       //      clock.clk
+		.reset     (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	PhoenixLedController #(
 		.CLOCK_FREQUENCY  (25000000),
 		.PWM_COUNTER_BITS (32)
 	) phoenix_led_controller_4 (
-		.clk       (clk_clk),                                // clock.clk
-		.reset     (rst_controller_reset_out_reset),         // reset.reset
-		.pwm_cycle (phoenix_led_controller_4_pwm_pwm_cycle), //   pwm.pwm_cycle
-		.pwm_duty  (phoenix_led_controller_4_pwm_pwm_duty)   //      .pwm_duty
+		.pwm_cycle (phoenix_led_controller_4_pwm_source_pwm_cycle), // pwm_source.pwm_cycle
+		.pwm_duty  (phoenix_led_controller_4_pwm_source_pwm_duty),  //           .pwm_duty
+		.clk       (clk_clk),                                       //      clock.clk
+		.reset     (rst_controller_reset_out_reset)                 //      reset.reset
 	);
 
 	altera_reset_controller #(

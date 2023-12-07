@@ -11,7 +11,7 @@ module PwmDriver
 
 reg [COUNTER_BITS - 1 : 0] counter;
 
-assign pwm = (counter >= cycle - duty);
+assign pwm = 1;// (counter >= cycle - duty);
 
 wire enable;
 

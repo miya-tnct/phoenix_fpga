@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2023.12.06.16:58:26</td>
+    <td class="l">2023.12.07.11:31:48</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -148,20 +148,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <hr/>
    <h2>led0</h2>pio_source v1.0
    <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_led_driver_0">led_driver_0</a>
-      </td>
-      <td class="from">pio&#160;&#160;</td>
-      <td class="main" rowspan="2">led0</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;pio_in</td>
-     </tr>
-    </table>
-   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -193,20 +179,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <hr/>
    <h2>led1</h2>pio_source v1.0
    <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_led_driver_1">led_driver_1</a>
-      </td>
-      <td class="from">pio&#160;&#160;</td>
-      <td class="main" rowspan="2">led1</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;pio_in</td>
-     </tr>
-    </table>
-   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -238,20 +210,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <hr/>
    <h2>led2</h2>pio_source v1.0
    <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_led_driver_2">led_driver_2</a>
-      </td>
-      <td class="from">pio&#160;&#160;</td>
-      <td class="main" rowspan="2">led2</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;pio_in</td>
-     </tr>
-    </table>
-   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -283,20 +241,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <hr/>
    <h2>led3</h2>pio_source v1.0
    <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_led_driver_3">led_driver_3</a>
-      </td>
-      <td class="from">pio&#160;&#160;</td>
-      <td class="main" rowspan="2">led3</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;pio_in</td>
-     </tr>
-    </table>
-   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -328,20 +272,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <hr/>
    <h2>led4</h2>pio_source v1.0
    <br/>
-   <div class="greydiv">
-    <table class="connectionboxes">
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_led_driver_4">led_driver_4</a>
-      </td>
-      <td class="from">pio&#160;&#160;</td>
-      <td class="main" rowspan="2">led4</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;pio_in</td>
-     </tr>
-    </table>
-   </div>
    <br/>
    <br/>
    <table class="flowbox">
@@ -391,26 +321,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;reset</td>
      </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">pio&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_led0">led0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;pio_in</td>
-     </tr>
      <tr style="height:6px">
       <td></td>
      </tr>
      <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_led0">led0</a>
+      </td>
+      <td class="from">pio_in&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;pwm</td>
+     </tr>
+     <tr>
       <td></td>
       <td></td>
-      <td class="from">pwm&#160;&#160;</td>
+      <td class="from">pwm_source&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_phoenix_led_controller_0">phoenix_led_controller_0</a>
       </td>
@@ -418,7 +344,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;pwm</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -480,9 +406,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_phoenix_led_controller_1">phoenix_led_controller_1</a>
+       <a href="#module_led1">led1</a>
       </td>
-      <td class="from">pwm&#160;&#160;</td>
+      <td class="from">pio_in&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;pwm</td>
@@ -490,15 +416,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">pio&#160;&#160;</td>
+      <td class="from">pwm_source&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_led1">led1</a>
+       <a href="#module_phoenix_led_controller_1">phoenix_led_controller_1</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;pio_in</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -560,9 +486,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_phoenix_led_controller_2">phoenix_led_controller_2</a>
+       <a href="#module_led2">led2</a>
       </td>
-      <td class="from">pwm&#160;&#160;</td>
+      <td class="from">pio_in&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;pwm</td>
@@ -570,15 +496,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">pio&#160;&#160;</td>
+      <td class="from">pwm_source&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_led2">led2</a>
+       <a href="#module_phoenix_led_controller_2">phoenix_led_controller_2</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;pio_in</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -640,9 +566,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_phoenix_led_controller_3">phoenix_led_controller_3</a>
+       <a href="#module_led3">led3</a>
       </td>
-      <td class="from">pwm&#160;&#160;</td>
+      <td class="from">pio_in&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;pwm</td>
@@ -650,15 +576,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">pio&#160;&#160;</td>
+      <td class="from">pwm_source&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_led3">led3</a>
+       <a href="#module_phoenix_led_controller_3">phoenix_led_controller_3</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;pio_in</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -720,9 +646,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_phoenix_led_controller_4">phoenix_led_controller_4</a>
+       <a href="#module_led4">led4</a>
       </td>
-      <td class="from">pwm&#160;&#160;</td>
+      <td class="from">pio_in&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;pwm</td>
@@ -730,15 +656,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">pio&#160;&#160;</td>
+      <td class="from">pwm_source&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_led4">led4</a>
+       <a href="#module_phoenix_led_controller_4">phoenix_led_controller_4</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;pio_in</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -802,10 +728,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="neighbor" rowspan="2">
        <a href="#module_led_driver_0">led_driver_0</a>
       </td>
-      <td class="from">pwm&#160;&#160;</td>
+      <td class="from">pwm_source&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;pwm</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -855,7 +781,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_25mhz">clk_25mhz</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="6">phoenix_led_controller_1</td>
+      <td class="main" rowspan="7">phoenix_led_controller_1</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -866,18 +792,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;reset</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="from">pwm&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_led_driver_1">led_driver_1</a>
       </td>
+      <td class="from">pwm_source&#160;&#160;</td>
      </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;pwm</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -927,7 +852,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_25mhz">clk_25mhz</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="6">phoenix_led_controller_2</td>
+      <td class="main" rowspan="7">phoenix_led_controller_2</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -938,18 +863,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;reset</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="from">pwm&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_led_driver_2">led_driver_2</a>
       </td>
+      <td class="from">pwm_source&#160;&#160;</td>
      </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;pwm</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -999,7 +923,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_25mhz">clk_25mhz</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="6">phoenix_led_controller_3</td>
+      <td class="main" rowspan="7">phoenix_led_controller_3</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -1010,18 +934,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;reset</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="from">pwm&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_led_driver_3">led_driver_3</a>
       </td>
+      <td class="from">pwm_source&#160;&#160;</td>
      </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;pwm</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>
@@ -1071,7 +994,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_25mhz">clk_25mhz</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="6">phoenix_led_controller_4</td>
+      <td class="main" rowspan="7">phoenix_led_controller_4</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock</td>
@@ -1082,18 +1005,17 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;reset</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="from">pwm&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_led_driver_4">led_driver_4</a>
       </td>
+      <td class="from">pwm_source&#160;&#160;</td>
      </tr>
      <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;pwm</td>
+      <td class="to">&#160;&#160;pwm_source</td>
      </tr>
     </table>
    </div>

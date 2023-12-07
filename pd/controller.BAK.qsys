@@ -57,6 +57,22 @@
          type = "String";
       }
    }
+   element controller
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone 10 LP";
+         type = "String";
+      }
+   }
+   element controller
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone 10 LP";
+         type = "String";
+      }
+   }
    element led0
    {
       datum _sortIndex
@@ -324,8 +340,8 @@
  <connection
    kind="conduit"
    version="22.1"
-   start="led_driver_0.pio"
-   end="led0.pio_in">
+   start="led0.pio_in"
+   end="led_driver_0.pwm">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -335,62 +351,7 @@
  <connection
    kind="conduit"
    version="22.1"
-   start="led_driver_1.pio"
-   end="led1.pio_in">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="22.1"
-   start="led_driver_2.pio"
-   end="led2.pio_in">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="22.1"
-   start="led_driver_3.pio"
-   end="led3.pio_in">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="22.1"
-   start="led_driver_4.pio"
-   end="led4.pio_in">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="22.1"
-   start="led_driver_0.pwm"
-   end="phoenix_led_controller_0.pwm">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="22.1"
-   start="phoenix_led_controller_1.pwm"
+   start="led1.pio_in"
    end="led_driver_1.pwm">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
@@ -401,7 +362,7 @@
  <connection
    kind="conduit"
    version="22.1"
-   start="phoenix_led_controller_2.pwm"
+   start="led2.pio_in"
    end="led_driver_2.pwm">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
@@ -412,7 +373,7 @@
  <connection
    kind="conduit"
    version="22.1"
-   start="phoenix_led_controller_3.pwm"
+   start="led3.pio_in"
    end="led_driver_3.pwm">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
@@ -423,8 +384,63 @@
  <connection
    kind="conduit"
    version="22.1"
-   start="phoenix_led_controller_4.pwm"
+   start="led4.pio_in"
    end="led_driver_4.pwm">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="22.1"
+   start="led_driver_0.pwm_source"
+   end="phoenix_led_controller_0.pwm_source">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="22.1"
+   start="led_driver_1.pwm_source"
+   end="phoenix_led_controller_1.pwm_source">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="22.1"
+   start="led_driver_2.pwm_source"
+   end="phoenix_led_controller_2.pwm_source">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="22.1"
+   start="led_driver_3.pwm_source"
+   end="phoenix_led_controller_3.pwm_source">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="22.1"
+   start="led_driver_4.pwm_source"
+   end="phoenix_led_controller_4.pwm_source">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

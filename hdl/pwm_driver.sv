@@ -11,24 +11,19 @@ module PwmDriver
 
 reg [COUNTER_BITS - 1 : 0] counter;
 
-assign pwm = (counter >= cycle - duty);
-
-wire enable;
-
-assign enable = (reset && counter < cycle);
+assign pwm = (counter >= cycle - duty) & reset;
 
 initial begin
   counter <= 1'b0;
 end
 
-always @(posedge clk) begin
-  if (enable) begin
+always @(posedge clk | !reset) begin
+  if (reset & counter < cycle - 1) begin
     counter <= counter + 1'b1;
   end
-end
-
-always @(negedge enable) begin
-  counter <= 1'b0;
+  else begin
+    counter <= 0;
+  end
 end
 
 endmodule

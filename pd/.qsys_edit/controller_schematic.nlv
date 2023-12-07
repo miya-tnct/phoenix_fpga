@@ -1,0 +1,40 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst controller.led0 -pg 1 -lvl 1 -y 40
+preplace inst controller.led1 -pg 1 -lvl 1 -y 100
+preplace inst controller.led2 -pg 1 -lvl 1 -y 180
+preplace inst controller.led_driver_0 -pg 1 -lvl 2 -y 30
+preplace inst controller.led3 -pg 1 -lvl 1 -y 260
+preplace inst controller.clk_25mhz -pg 1 -lvl 1 -y 340
+preplace inst controller.led_driver_1 -pg 1 -lvl 2 -y 210
+preplace inst controller.led4 -pg 1 -lvl 1 -y 400
+preplace inst controller.phoenix_led_controller_0 -pg 1 -lvl 2 -y 130
+preplace inst controller.led_driver_2 -pg 1 -lvl 2 -y 310
+preplace inst controller -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst controller.phoenix_led_controller_1 -pg 1 -lvl 2 -y 410
+preplace inst controller.led_driver_3 -pg 1 -lvl 2 -y 570
+preplace inst controller.phoenix_led_controller_2 -pg 1 -lvl 2 -y 490
+preplace inst controller.led_driver_4 -pg 1 -lvl 2 -y 830
+preplace inst controller.phoenix_led_controller_3 -pg 1 -lvl 2 -y 670
+preplace inst controller.phoenix_led_controller_4 -pg 1 -lvl 2 -y 750
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led2,(SLAVE)led2.pio_out) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)led3.pio_out,(SLAVE)controller.led3) 1 0 1 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led4,(SLAVE)led4.pio_out) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>controller</net_container>(MASTER)clk_25mhz.clk_reset,(SLAVE)led_driver_0.reset,(SLAVE)led_driver_2.reset,(SLAVE)phoenix_led_controller_0.reset,(SLAVE)led_driver_1.reset,(SLAVE)led_driver_3.reset,(SLAVE)led_driver_4.reset,(SLAVE)phoenix_led_controller_3.reset,(SLAVE)phoenix_led_controller_2.reset,(SLAVE)phoenix_led_controller_4.reset,(SLAVE)phoenix_led_controller_1.reset) 1 1 1 380
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_1.pwm,(SLAVE)phoenix_led_controller_1.pwm) 1 1 1 400
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_4.pwm,(SLAVE)phoenix_led_controller_4.pwm) 1 1 1 420
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_2.pwm,(SLAVE)phoenix_led_controller_2.pwm) 1 1 1 420
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led1.pio_in,(SLAVE)led_driver_1.pio) 1 0 2 80 170 340
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led4.pio_in,(SLAVE)led_driver_4.pio) 1 0 2 100 860 N
+preplace netloc FAN_OUT<net_container>controller</net_container>(SLAVE)led_driver_0.clock,(SLAVE)phoenix_led_controller_3.clock,(SLAVE)led_driver_2.clock,(SLAVE)phoenix_led_controller_4.clock,(SLAVE)led_driver_1.clock,(SLAVE)phoenix_led_controller_2.clock,(MASTER)clk_25mhz.clk,(SLAVE)led_driver_3.clock,(SLAVE)phoenix_led_controller_0.clock,(SLAVE)led_driver_4.clock,(SLAVE)phoenix_led_controller_1.clock) 1 1 1 360
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.reset,(SLAVE)clk_25mhz.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_0.pio,(SLAVE)led0.pio_in) 1 0 2 80 30 340
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led2.pio_in,(SLAVE)led_driver_2.pio) 1 0 2 80 330 NJ
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.led1,(SLAVE)led1.pio_out) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)phoenix_led_controller_3.pwm,(SLAVE)led_driver_3.pwm) 1 1 1 420
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led_driver_0.pwm,(SLAVE)phoenix_led_controller_0.pwm) 1 1 1 400
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)controller.clk,(SLAVE)clk_25mhz.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>controller</net_container>(SLAVE)led3.pio_in,(SLAVE)led_driver_3.pio) 1 0 2 100 250 320
+preplace netloc EXPORT<net_container>controller</net_container>(SLAVE)led0.pio_out,(SLAVE)controller.led0) 1 0 1 NJ
+levelinfo -pg 1 0 50 630
+levelinfo -hier controller 60 130 490 620

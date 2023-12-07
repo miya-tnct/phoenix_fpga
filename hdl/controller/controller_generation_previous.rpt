@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/kiks/phoenix_fpga/controller.qsys --block-symbol-file --output-directory=/home/kiks/phoenix_fpga/hdl/controller --family="Cyclone 10 LP" --part=10CL025YU256C8G
-Progress: Loading phoenix_fpga/controller.qsys
+Info: qsys-generate /home/kiks/phoenix_fpga/pd/controller.qsys --block-symbol-file --output-directory=/home/kiks/phoenix_fpga/hdl/controller --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading pd/controller.qsys
 Progress: Reading input file
 Progress: Adding clk_25mhz [clock_source 22.1]
 Progress: Parameterizing module clk_25mhz
@@ -26,16 +26,44 @@ Progress: Adding led_driver_4 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_4
 Progress: Adding phoenix_led_controller_0 [phoenix_led_controller 1.0]
 Progress: Parameterizing module phoenix_led_controller_0
+Progress: Adding phoenix_led_controller_1 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_1
+Progress: Adding phoenix_led_controller_2 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_2
+Progress: Adding phoenix_led_controller_3 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_3
+Progress: Adding phoenix_led_controller_4 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_4
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Error: controller.led_driver_1.pio/led1.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led_driver_2.pio/led2.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led_driver_3.pio/led3.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led_driver_4.pio/led4.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led0.pio_in/led_driver_0.pio: Missing connection end (try "Remove Dangling Connections")
+Error: controller.led_driver_0.pwm/phoenix_led_controller_0.pwm: Missing connection end (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_1.pwm/led_driver_1.pwm: Missing connection start (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_2.pwm/led_driver_2.pwm: Missing connection start (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_3.pwm/led_driver_3.pwm: Missing connection start (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_4.pwm/led_driver_4.pwm: Missing connection start (try "Remove Dangling Connections")
+Warning: controller.led_driver_0: led_driver_0.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_1: led_driver_1.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_2: led_driver_2.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_3: led_driver_3.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_4: led_driver_4.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_0: phoenix_led_controller_0.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_1: phoenix_led_controller_1.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_2: phoenix_led_controller_2.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_3: phoenix_led_controller_3.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_4: phoenix_led_controller_4.pwm_source must be exported, or connected to a matching conduit.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/kiks/phoenix_fpga/controller.qsys --synthesis=VERILOG --output-directory=/home/kiks/phoenix_fpga/hdl/controller/synthesis --family="Cyclone 10 LP" --part=10CL025YU256C8G
-Progress: Loading phoenix_fpga/controller.qsys
+Info: qsys-generate /home/kiks/phoenix_fpga/pd/controller.qsys --synthesis=VERILOG --output-directory=/home/kiks/phoenix_fpga/hdl/controller/synthesis --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading pd/controller.qsys
 Progress: Reading input file
 Progress: Adding clk_25mhz [clock_source 22.1]
 Progress: Parameterizing module clk_25mhz
@@ -61,15 +89,53 @@ Progress: Adding led_driver_4 [pwm_driver 1.0]
 Progress: Parameterizing module led_driver_4
 Progress: Adding phoenix_led_controller_0 [phoenix_led_controller 1.0]
 Progress: Parameterizing module phoenix_led_controller_0
+Progress: Adding phoenix_led_controller_1 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_1
+Progress: Adding phoenix_led_controller_2 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_2
+Progress: Adding phoenix_led_controller_3 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_3
+Progress: Adding phoenix_led_controller_4 [phoenix_led_controller 1.0]
+Progress: Parameterizing module phoenix_led_controller_4
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Error: controller.led_driver_1.pio/led1.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led_driver_2.pio/led2.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led_driver_3.pio/led3.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led_driver_4.pio/led4.pio_in: Missing connection start (try "Remove Dangling Connections")
+Error: controller.led0.pio_in/led_driver_0.pio: Missing connection end (try "Remove Dangling Connections")
+Error: controller.led_driver_0.pwm/phoenix_led_controller_0.pwm: Missing connection end (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_1.pwm/led_driver_1.pwm: Missing connection start (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_2.pwm/led_driver_2.pwm: Missing connection start (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_3.pwm/led_driver_3.pwm: Missing connection start (try "Remove Dangling Connections")
+Error: controller.phoenix_led_controller_4.pwm/led_driver_4.pwm: Missing connection start (try "Remove Dangling Connections")
+Warning: controller.led_driver_0: led_driver_0.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_1: led_driver_1.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_2: led_driver_2.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_3: led_driver_3.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.led_driver_4: led_driver_4.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_0: phoenix_led_controller_0.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_1: phoenix_led_controller_1.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_2: phoenix_led_controller_2.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_3: phoenix_led_controller_3.pwm_source must be exported, or connected to a matching conduit.
+Warning: controller.phoenix_led_controller_4: phoenix_led_controller_4.pwm_source must be exported, or connected to a matching conduit.
 Info: controller: Generating controller "controller" for QUARTUS_SYNTH
+Warning: controller: "No matching role found for led1:pio_in:pio_in (pio)"
+Warning: controller: "No matching role found for led2:pio_in:pio_in (pio)"
+Warning: controller: "No matching role found for led3:pio_in:pio_in (pio)"
+Warning: controller: "No matching role found for led4:pio_in:pio_in (pio)"
+Warning: controller: "No matching role found for led0:pio_in:pio_in (pio)"
+Warning: controller: "No matching role found for led_driver_0:pwm:pwm (pio)"
+Warning: controller: "No matching role found for led_driver_1:pwm:pwm (pio)"
+Warning: controller: "No matching role found for led_driver_2:pwm:pwm (pio)"
+Warning: controller: "No matching role found for led_driver_3:pwm:pwm (pio)"
+Warning: controller: "No matching role found for led_driver_4:pwm:pwm (pio)"
 Info: led0: "controller" instantiated pio_source "led0"
 Info: led_driver_0: "controller" instantiated pwm_driver "led_driver_0"
 Info: phoenix_led_controller_0: "controller" instantiated phoenix_led_controller "phoenix_led_controller_0"
 Info: rst_controller: "controller" instantiated altera_reset_controller "rst_controller"
 Info: controller: Done "controller" with 5 modules, 7 files
-Info: qsys-generate succeeded.
+Error: qsys-generate failed with exit code 1: 10 Errors, 20 Warnings
 Info: Finished: Create HDL design files for synthesis

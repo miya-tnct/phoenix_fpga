@@ -12,21 +12,30 @@ module PhoenixLedController
   input wire reset
 );
 
-reg [PWM_COUNTER_BITS - 1 : 0] counter;
+reg [PWM_COUNTER_BITS - 1 : 0] counter, cycle;
 
 initial begin
   counter <= 0;
+  cycle <= INITIALIZE_BLINKING_CYCLE;
   pwm_cycle <= PWM_CYCLE;
+  pwm_duty <= PWM_CYCLE;
 end
 
-always @(posedge clk) begin
-  counter <= counter + 1;
-  if (counter >= INITIALIZE_BLINKING_CYCLE - INITIALIZE_BLINKING_ON_COUNT) begin
-    pwm_duty <= PWM_CYCLE;
-  end
-  else begin
-    pwm_duty <= 0;
-  end
-end
+// wire local_reset = reset & (counter < cycle);
+
+// always @(posedge clk & local_reset) begin
+//   counter <= counter + 1;
+//   if (counter >= INITIALIZE_BLINKING_CYCLE - INITIALIZE_BLINKING_ON_COUNT) begin
+//     pwm_duty <= PWM_CYCLE;
+//   end
+//   else begin
+//     pwm_duty <= 0;
+//   end
+// end
+
+// always @(negedge local_reset) begin
+//   counter <= 0;
+//   cycle <= INITIALIZE_BLINKING_CYCLE;
+// end
 
 endmodule
